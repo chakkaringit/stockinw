@@ -20,5 +20,5 @@ foreach ($events as $event) {
         $bot->replyText($reply_token, $text);
     }
 }
-echo $events
+
 echo "OK";
