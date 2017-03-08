@@ -9,6 +9,6 @@ $bot = new \LINE\LINEBot(new \LINE\LINEBot\HTTPClient\CurlHTTPClient($channel_ac
 
 $signature = $_SERVER["HTTP_".\LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE];
 $body = file_get_contents("php://input");
-
+file_put_contents("php://stderr", $body.PHP_EOL);
 echo $body;
 echo "OK";
