@@ -11,6 +11,6 @@ $bot = new \LINE\LINEBot($httpClient, [$channel_secret]);
 $signature = $_SERVER["HTTP_".\LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE];
 $body = file_get_contents("php://input");
 
-
+$events = $bot->parseEventRequest($body,$channel_secret,$signature);
 
 echo "OK";
