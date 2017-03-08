@@ -8,5 +8,7 @@ $channel_secret = '6f5cf08d93f0988ceb5468a23c8fc789';
 $bot = new \LINE\LINEBot(new \LINE\LINEBot\HTTPClient\CurlHTTPClient($channel_access_token),['channelSecret' => $channel_secret]);
 
 $signature = $_SERVER["HTTP_".\LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE];
-echo $signature;
+$body = file_get_contents("php://input");
+
+echo $body;
 echo "OK";
